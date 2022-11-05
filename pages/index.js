@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import getCount from '../api/getCount';
+import getForecast from '../api/getForecast';
 
-export default function Home({ count }) {
+export default function Home({ count, forecast }) {
   return (
     <div>
       <Head>
@@ -11,17 +12,19 @@ export default function Home({ count }) {
         <meta name="keywords" content="브니엘고등학교, 알림판, 현황판, 대시보드" />
       </Head>
 
-      <Header count={count} />
+      <Header count={count} forecast={forecast} />
     </div>
   );
 }
 
 export async function getStaticProps() {
   const count = await getCount();
-
+  const forecast = await getForecast();
+  console.log(forecast);
   return {
     props: {
       count,
+      forecast,
     },
   };
 }

@@ -8,19 +8,12 @@ export default async function getCount() {
   let dom = new JSDOM(html);
   
   if (!dom.window.document.querySelector(".result").textContent.includes("남았습니다.")) {
-    year++;
+    year += 1;
+
+    res = await fetch(`https://superkts.com/cal/su_day/${year}`);
+    html = await res.text();
+    dom = new JSDOM(html);
   }
-
-  res = await fetch(`https://superkts.com/cal/su_day/${year}`);
-
-  html = await res.text();
-  dom = new JSDOM(html);
   
-  const count = parseInt(dom.window.document.querySelector(".result > b").textContent.replace("일", ""));
-  
-  if (dom.window.document.querySelector(".result").textContent.includes("남았습니다.")) {
-    year++ 
-  }
-
-  return count;
+  return parseInt(dom.window.document.querySelector(".result > b").textContent.replace("일", ""));
 }
