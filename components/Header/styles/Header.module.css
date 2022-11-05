@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+}
+
+.blank {
+  margin: 0 0.35rem;
+}

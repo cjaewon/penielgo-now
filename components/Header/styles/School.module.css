@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  background: #E5E7EB;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.925rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  margin: -2px 0 0 0;
+}
