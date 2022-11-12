@@ -10,7 +10,7 @@ export default function School() {
         />
       </div>
       <div className={styles.column}>
-        <h2 className={styles.title}>브니엘고 라이브</h2>
+        <h2 className={styles.title}>브니엘고 나우</h2>
         <p className={styles.description}>부산광역시 금정구 체육공원로 154</p>
       </div>
     </div>

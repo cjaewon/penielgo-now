@@ -1,7 +1,7 @@
 .container {
   padding: 1rem 1.75rem;
   border-radius: 0.5rem;
-  background-image: url("https://cdn.pixabay.com/photo/2017/12/29/02/15/pond-3046592_960_720.png");
+  background-image: url("/weather-background.png");
 
   display: flex;
   align-items: center;

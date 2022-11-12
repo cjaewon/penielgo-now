@@ -5,7 +5,7 @@ export default function Counter({ count }) {
     <div className={styles.container}>
       <div>
         <img 
-          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/tear-off-calendar_1f4c6.png"
+          src="/emoji/calendar.png"
           className={styles.logo}
         />
       </div>

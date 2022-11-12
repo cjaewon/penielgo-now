@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Header from '../components/Header';
 import getCount from '../api/getCount';
 import getForecast from '../api/getForecast';
+import Meal from '../components/Meal';
+import getMeals from '../api/getMeals';
 
-export default function Home({ count, forecast }) {
+export default function Home({ count, forecast, meals }) {
   return (
     <div>
       <Head>
@@ -12,7 +14,14 @@ export default function Home({ count, forecast }) {
         <meta name="keywords" content="브니엘고등학교, 알림판, 현황판, 대시보드" />
       </Head>
 
-      <Header count={count} forecast={forecast} />
+      <Header 
+        count={count} 
+        forecast={forecast}
+      />
+
+      <Meal
+        meals={meals}
+      />
     </div>
   );
 }
@@ -20,11 +29,13 @@ export default function Home({ count, forecast }) {
 export async function getStaticProps() {
   const count = await getCount();
   const forecast = await getForecast();
-  console.log(forecast);
+  const meals = await getMeals();
+
   return {
     props: {
       count,
       forecast,
+      meals,
     },
   };
 }

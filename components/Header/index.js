@@ -1,7 +1,7 @@
 import School from "./School";
 import Counter from "./Counter";
-import styles from "./styles/Header.module.css";
 import Forecast from "./Forecast";
+import styles from "./styles/Header.module.css";
 
 export default function Header({ count, forecast }) {
   return (
