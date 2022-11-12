@@ -3,6 +3,7 @@
   background-position: -2rem;
 
   width: 632px;
+  flex-shrink: 0;
   background-color: #F3F4F6;
   padding: 1rem 1rem;
   margin-right: 1.75rem;

@@ -6,8 +6,9 @@ import Meal from '../components/Meal';
 import getMeals from '../api/getMeals';
 import getCorona from '../api/getCorona';
 import Footer from '../components/Footer';
+import getBoard from '../api/getBoard';
 
-export default function Home({ count, forecast, meals, corona, generatedTime }) {
+export default function Home({ count, forecast, meals, corona, board, generatedTime }) {
   return (
     <div>
       <Head>
@@ -25,7 +26,7 @@ export default function Home({ count, forecast, meals, corona, generatedTime }) 
       <Meal
         meals={meals}
       />
-      <Footer corona={corona} />
+      <Footer corona={corona} board={board} />
     </div>
   );
 }
@@ -35,6 +36,7 @@ export async function getStaticProps() {
   const forecast = await getForecast();
   const meals = await getMeals();
   const corona = await getCorona();
+  const board = await getBoard();
 
   const generatedTime = new Date().toString();
 
@@ -44,6 +46,7 @@ export async function getStaticProps() {
       forecast,
       meals,
       corona,
+      board,
       generatedTime,
     },
   };
