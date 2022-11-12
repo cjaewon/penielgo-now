@@ -20,7 +20,7 @@ export default function Meal({ meals }) {
 
             const day = ['일', '월', '화', '수', '목', '금', '토'][mealDate.getDay()];
 
-            return (<MealCard date={date + ` (${day})`} meal={meal} />)
+            return (<MealCard key={date} date={date + ` (${day})`} meal={meal} />)
           })
       }
     </div>

@@ -4,8 +4,11 @@ import getCount from '../api/getCount';
 import getForecast from '../api/getForecast';
 import Meal from '../components/Meal';
 import getMeals from '../api/getMeals';
+import getCorona from '../api/getCorona';
+import Corona from '../components/Corona';
+import Clock from '../components/Clock';
 
-export default function Home({ count, forecast, meals }) {
+export default function Home({ count, forecast, meals, corona, generatedTime }) {
   return (
     <div>
       <Head>
@@ -17,11 +20,16 @@ export default function Home({ count, forecast, meals }) {
       <Header 
         count={count} 
         forecast={forecast}
+        generatedTime={generatedTime}
       />
 
       <Meal
         meals={meals}
       />
+      <Corona
+        corona={corona}
+      />
+      <Clock corona={corona} />
     </div>
   );
 }
@@ -30,12 +38,17 @@ export async function getStaticProps() {
   const count = await getCount();
   const forecast = await getForecast();
   const meals = await getMeals();
+  const corona = await getCorona();
+
+  const generatedTime = new Date().toString();
 
   return {
     props: {
       count,
       forecast,
       meals,
+      corona,
+      generatedTime,
     },
   };
 }

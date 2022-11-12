@@ -1,0 +1,18 @@
+.container {
+  background-image: url("https://cdn.pixabay.com/photo/2020/03/25/11/31/envato-4966949_960_720.jpg");
+
+  width: 300px;
+  background-color: #F3F4F6;
+  padding: 1rem 1rem;
+  margin-right: 1.75rem;
+  border-radius: 1.025rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.text { 
+  white-space: pre-wrap;
+  line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  color: white;
+}

@@ -38,7 +38,7 @@ async function getMealsByDate(date) {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
 
-  const res = await fetch(`https://school.koreacharts.com/school/meals/B000012159/${year}${month}.html`)
+  const res = await fetch(`https://school.koreacharts.com/school/meals/B000012159/${year}${month}.html`);
 
   const html = await res.text();
   const dom = new JSDOM(html);
