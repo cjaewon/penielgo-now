@@ -5,15 +5,14 @@ import getForecast from '../api/getForecast';
 import Meal from '../components/Meal';
 import getMeals from '../api/getMeals';
 import getCorona from '../api/getCorona';
-import Corona from '../components/Corona';
-import Clock from '../components/Clock';
+import Footer from '../components/Footer';
 
 export default function Home({ count, forecast, meals, corona, generatedTime }) {
   return (
     <div>
       <Head>
         <title>브니엘고 나우</title>
-        <meta name="description" content="브니엘고 나우는 브니엘고등학교 관련 정보를 제공하는 알림판입니다." />
+        <meta name="description" content="브니엘고 나우(NOW)는 브니엘고등학교 관련 정보를 제공하는 알림판입니다." />
         <meta name="keywords" content="브니엘고등학교, 알림판, 현황판, 대시보드" />
       </Head>
 
@@ -26,10 +25,7 @@ export default function Home({ count, forecast, meals, corona, generatedTime }) 
       <Meal
         meals={meals}
       />
-      <Corona
-        corona={corona}
-      />
-      <Clock corona={corona} />
+      <Footer corona={corona} />
     </div>
   );
 }
