@@ -2,7 +2,7 @@ import { JSDOM } from "jsdom";
 
 function pureText(text) {
   // 탭 제거 + 원산지 제거 ex (sh) (cj) + 앞 뒤 줄바꿈 제거 + 줄바꿈 여러개 제거
-  return text.replace(/\t/g, "").replaceAll("(sh)", "").replaceAll("(cj)", "").replace(/^\n+|\n+$/g, '').replace(/\n\n/g, "\n").trim();
+  return text.replace(/\t/g, "").replaceAll("(sh)", "").replaceAll("(cj)", "").replace(/^\n+|\n+$/g, '').replace(/\n\n\n\n/g, "\n\n").replace(/\n\n/g, "\n").trim();
 }
 
 function addEmoji(text) {
@@ -33,11 +33,6 @@ function addEmoji(text) {
 
   return text;
 }
-
-function getDay(date) {
-  return ['일', '월', '화', '수', '목', '금', '토'][date.getDay()]
-}
-
 
 async function getMealsByDate(date) {
   const year = date.getFullYear();

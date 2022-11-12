@@ -1,7 +1,7 @@
 import styles from "./styles/MealCard.module.css";
 
 export default function MealCard({ date, meal }) {
-
+  
 
   return (
     <div className={styles.container}>
