@@ -26,7 +26,10 @@ export default function Home({ count, forecast, meals, corona, board, generatedT
       <Meal
         meals={meals}
       />
-      <Footer corona={corona} board={board} />
+      <Footer
+        corona={corona}
+        board={board}
+      />
     </div>
   );
 }

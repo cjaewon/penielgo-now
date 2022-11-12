@@ -1,7 +1,7 @@
 import Corona from "./Corona";
 import Clock from "./Clock";
-import styles from "./styles/Footer.module.css";
 import Board from "./Board";
+import styles from "./styles/Footer.module.css";
 
 export default function Footer({ corona, board }) {
   return (

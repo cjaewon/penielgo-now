@@ -12,8 +12,8 @@ export default function Meal({ meals }) {
         meals
           .slice(today.getDate() - 1, today.getDate() + 6)
           .map(([date, meal], i) => {
-            if (i === 0) return (<MealCard date="오늘 급식" meal={meal} />);
-            else if (i === 1) return (<MealCard date="내일 급식" meal={meal} />);
+            if (i === 0) return (<MealCard key={date} date="오늘 급식" meal={meal} />);
+            else if (i === 1) return (<MealCard key={date} date="내일 급식" meal={meal} />);
 
             const mealDate = new Date();
             mealDate.setDate(today.getDate() + i);
