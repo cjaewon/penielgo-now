@@ -1,7 +1,7 @@
 .container {
   background-image: url("https://cdn.pixabay.com/photo/2022/03/22/02/39/beach-7084237_960_720.jpg");
 
-  width: 300px;
+  width: 18.75rem;
   flex-shrink: 0;
   background-color: #F3F4F6;
   padding: 1rem 1rem;

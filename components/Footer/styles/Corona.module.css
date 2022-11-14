@@ -1,7 +1,7 @@
 .container {
   background-image: url("https://cdn.pixabay.com/photo/2020/03/25/11/31/envato-4966949_960_720.jpg");
 
-  width: 300px;
+  width: 18.75rem;
   flex-shrink: 0;
   background-color: #F3F4F6;
   padding: 1rem 1rem;

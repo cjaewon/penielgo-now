@@ -8,16 +8,12 @@ export default function Calendar({ calendar }) {
         { calendar.map(schedule => {
             if (schedule.bgnde !== schedule.endde) {
               return (
-                <>
-                  <span>• ({schedule.bgnde} ~ {schedule.endde})<br/> - {schedule.schdulTitle}</span>
-                <br/></>
+                <span key={schedule.schdulTitle}>• ({schedule.bgnde} ~ {schedule.endde})<br/> - {schedule.schdulTitle}<br/></span>
               );
             }
 
             return (
-              <>
-                <span>• ({schedule.bgnde}) - {schedule.schdulTitle}</span>
-              <br/></>
+              <span key={schedule.schdulTitle}>• ({schedule.bgnde}) - {schedule.schdulTitle}<br/></span>
             );
           })
         }
