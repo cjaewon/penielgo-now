@@ -12,7 +12,7 @@ export default function Corona({ corona }) {
 
 
   return (
-    <div className={styles.container} style={{ backgroundImage: `url("${process.env.assetPrefix}/corona-background.jpeg");` }}>
+    <div className={styles.container}>
       <h3 className={styles.title}>📢 코로나바이러스-19 감염증 현황</h3>
       <p className={styles.text}>
         {text}

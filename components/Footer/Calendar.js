@@ -2,7 +2,7 @@ import styles from "./styles/Calendar.module.css";
 
 export default function Calendar({ calendar }) {
   return (
-    <div className={styles.container} style={{ backgroundImage: `url("${process.env.assetPrefix}/calendar-background.jpeg");`  }}>
+    <div className={styles.container}>
       <h3 className={styles.title}>🏫 학교 일정</h3>
       <p className={styles.text}>
         { calendar.map(schedule => {

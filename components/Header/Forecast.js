@@ -34,7 +34,7 @@ export default function Forecast({ forecast }) {
   // 참고 https://help.naver.com/service/5600/contents/12371?lang=ko
 
   return (
-    <div className={styles.container} style={{ backgroundImage: `url("${process.env.assetPrefix}/weather-background.png");` }}>
+    <div className={styles.container}>
       <div>
         <img 
           src={process.env.assetPrefix + weatherEmojiMap[forecast.weather]}

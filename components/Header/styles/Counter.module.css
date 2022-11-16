@@ -1,6 +1,7 @@
 .container {
   padding: 1rem 1.75rem;
   border-radius: 0.5rem;
+  background-image: url("https://cjaewon.github.io/penielgo-now/counter-background.jpeg");
 
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@ import styles from "./styles/Counter.module.css";
 
 export default function Counter({ count }) {
   return (
-    <div className={styles.container} style={{ backgroundImage: `url("${process.env.assetPrefix}/counter-background.jpeg");` }}>
+    <div className={styles.container}>
       <div>
         <img 
           src={`${process.env.assetPrefix}/emoji/calendar.png`}

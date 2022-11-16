@@ -17,7 +17,7 @@ export default function Clock({ }) {
   }, []);
 
   return (
-    <div className={styles.container} style={{ backgroundImage: `url("${process.env.assetPrefix}/clock-background.jpeg");` }}>
+    <div className={styles.container}>
 
       <p className={styles.text}>
         현재 시간 <br/> {now.getFullYear()}년 {now.getMonth() + 1}월 {now.getDate()}일 오후 {now.getHours()}시 {now.getMinutes()}분
