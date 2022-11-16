@@ -9,14 +9,14 @@ on:
     # kst 2:30 am / utc 5:30 pm
     - cron : "30 17 * * *"
     # only for test
-    workflow_dispatch:
-      inputs:
-         logLevel:
-            description: 'Log level'     
-            required: true
-            default: 'warning'
-         tags:
-            description: 'test'
+  workflow_dispatch:
+    inputs:
+        logLevel:
+          description: 'Log level'     
+          required: true
+          default: 'warning'
+        tags:
+          description: 'test'
 jobs:
   deploy-job:
     runs-on: ubuntu-latest
