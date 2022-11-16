@@ -39,5 +39,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: gh-pages
-          file_pattern: 'out/*'
+          repository: ./out
           commit_message: Automated publish
