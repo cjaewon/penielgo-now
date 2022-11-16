@@ -27,11 +27,9 @@ jobs:
           node-version: '18'
       - uses: actions/cache@v2 
         with:
-          path: ${{ github.workspace }}/node_modules
           path: |
             ${{ github.workspace }}/node_modules
             ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
