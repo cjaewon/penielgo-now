@@ -3,13 +3,11 @@ name: auto-deployment
 on:
   schedule:
     # kst 6:30 am / utc 9:30 pm
-    - cron: "30 21 * * 1-5"
+    - cron: "30 21 * * *"
     # kst 11:30 am / utc 2:30 am
-    - cron: "30 2 * * 1-5"
+    - cron: "30 2 * * *"
     # kst 2:30 am / utc 5:30 pm
-    - cron : "30 17 * * 1-5"
-    # kst 6:30 am / utc 9:30 pm
-    - cron: "30 21 * * 6-7"
+    - cron : "30 17 * * *"
     # only for test
   workflow_dispatch:
     inputs:
