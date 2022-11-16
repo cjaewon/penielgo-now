@@ -46,7 +46,8 @@ export async function getStaticProps() {
   const board = await getBoard();
   const calendar = await getCalendar();
 
-  const generatedTime = new Date().toString();
+  const now = new Date();
+  const kst = new Date(now.getTime() + (now.getTimezoneOffset() * 60 * 1000 + (9 * 60 * 60 * 1000))).toString();
 
   return {
     props: {
@@ -56,7 +57,7 @@ export async function getStaticProps() {
       corona,
       board,
       calendar,
-      generatedTime,
+      generatedTime: kst,
     },
   };
 }

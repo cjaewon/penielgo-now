@@ -5,7 +5,7 @@ export default function School() {
     <div className={styles.container}>
       <div>
         <img 
-          src="/logo.png"
+          src={`${process.env.assetPrefix}/logo.png`}
           className={styles.logo}
         />
       </div>
