@@ -9,6 +9,8 @@ import Footer from '../components/Footer';
 import getBoard from '../api/getBoard';
 import getCalendar from '../api/getCalendar';
 
+import '../utils/refresh';
+
 export default function Home({ count, forecast, meals, corona, board, calendar, generatedTime }) {
   return (
     <div>
