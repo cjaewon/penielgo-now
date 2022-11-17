@@ -7,7 +7,7 @@ on:
     # kst 11:30 am / utc 2:30 am
     - cron: "30 2 * * *"
     # kst 2:30 am / utc 5:30 pm
-    - cron : "30 17 * * *"
+    # - cron : "30 17 * * *"
     # only for test
   workflow_dispatch:
     inputs:
