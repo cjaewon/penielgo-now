@@ -10,7 +10,7 @@ export default function Meal({ meals }) {
       <TitleCard />
       {  
         meals
-          .slice(today.getDate() - 1, today.getDate() + 6)
+          .slice(today.getDate() - 1, today.getDate() + 4) // + 6
           .map(([date, meal], i) => {
             if (i === 0) return (<MealCard key={date} date="오늘 급식" meal={meal} />);
             else if (i === 1) return (<MealCard key={date} date="내일 급식" meal={meal} />);
