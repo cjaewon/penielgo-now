@@ -20,7 +20,7 @@ export default function Clock({ }) {
     <div className={styles.container}>
 
       <p className={styles.text}>
-        현재 시간 <br/> {now.getFullYear()}년 {now.getMonth() + 1}월 {now.getDate()}일 오후 {now.getHours()}시 {now.getMinutes()}분
+        현재 시간 <br/> {now.getMonth() + 1}월 {now.getDate()}일 오후 {now.getHours()}시 {now.getMinutes()}분
       </p>
     </div>
   );

@@ -5,7 +5,7 @@ import Description from "./Description";
 
 import styles from "./styles/Header.module.css";
 
-export default function Header({ count, forecast, generatedTime }) {
+export default function Header({ count, calendar, generatedTime }) {
   return (
     <div>
       <div className={`${styles.row} ${styles.between}`}>
@@ -13,12 +13,12 @@ export default function Header({ count, forecast, generatedTime }) {
         <div className={`${styles.row}`}>
           <Counter count={count} />
           <span className={styles.blank}></span>
-          <Forecast forecast={forecast} />
+          <Forecast calendar={calendar} />
         </div>
       </div>
       <div className={`${styles.row} ${styles.between}`}>
         <Description text="브니엘고 나우(NOW)는 브니엘고등학교 관련 정보를 제공하는 알림판입니다." />
-        <Description text={`🔄 ${generatedTime}에 갱신됨 | 제작 최재원`} />
+        <Description text={`🔄 ${generatedTime}에 갱신됨`} />
       </div>
     </div>
 

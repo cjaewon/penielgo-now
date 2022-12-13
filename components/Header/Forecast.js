@@ -1,6 +1,6 @@
-import styles from "./styles/Forecast.module.css";
+import styles from "./styles/Calendar.module.css";
 
-export default function Forecast({ forecast }) {
+export default function Calendar({ calendar }) {
   const weatherEmojiMap = {
     "맑음": "/emoji/sun.png",
     "구름조금": "/emoji/cloud.png",
@@ -32,18 +32,20 @@ export default function Forecast({ forecast }) {
   };
 
   // 참고 https://help.naver.com/service/5600/contents/12371?lang=ko
+  const now = new Date();
+  const todayCalendar = calendar.filter(day => day.bgnde === `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate() < 9 ? "0" + now.getDate() : now.getDate()}`);
 
   return (
     <div className={styles.container}>
       <div>
         <img 
-          src={process.env.assetPrefix + weatherEmojiMap[forecast.weather]}
+          src={`${process.env.assetPrefix}/emoji/calendar.png`}
           className={styles.logo}
         />
       </div>
       <div className={styles.column}>
-        <h1 className={styles.title}>{forecast.weather} {forecast.temperature}°</h1>
-        <p className={styles.description}>{forecast.comment}</p>
+        <h1 className={styles.title}>{todayCalendar.length >= 1 ? (todayCalendar.length === 1 ? todayCalendar[0].schdulTitle : todayCalendar[0].schdulTitle + " 외 " + (todayCalendar.length - 1) +"개") : "특별한 일정이 없습니다."}</h1>
+        <p className={styles.description}>오늘의 일정</p>
       </div>
     </div>
   );

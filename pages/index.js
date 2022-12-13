@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import getCount from '../api/getCount';
-import getForecast from '../api/getForecast';
-import Meal from '../components/Meal';
+import getWeather from '../api/getWeather';
+import Center from '../components/Center';
 import getMeals from '../api/getMeals';
 import getCorona from '../api/getCorona';
 import Footer from '../components/Footer';
@@ -11,7 +11,7 @@ import getCalendar from '../api/getCalendar';
 
 import '../utils/refresh';
 
-export default function Home({ count, forecast, meals, corona, board, calendar, generatedTime }) {
+export default function Home({ count, weather, meals, corona, board, calendar, generatedTime }) {
   return (
     <div>
       <Head>
@@ -22,12 +22,13 @@ export default function Home({ count, forecast, meals, corona, board, calendar, 
 
       <Header 
         count={count} 
-        forecast={forecast}
+        calendar={calendar}
         generatedTime={generatedTime}
       />
 
-      <Meal
+      <Center
         meals={meals}
+        weather={weather}
       />
       <Footer
         corona={corona}
@@ -40,7 +41,7 @@ export default function Home({ count, forecast, meals, corona, board, calendar, 
 
 export async function getStaticProps() {
   const count = await getCount();
-  const forecast = await getForecast();
+  const weather = await getWeather();
   const meals = await getMeals();
   const corona = await getCorona();
   const board = await getBoard();
@@ -52,7 +53,7 @@ export async function getStaticProps() {
   return {
     props: {
       count,
-      forecast,
+      weather,
       meals,
       corona,
       board,
