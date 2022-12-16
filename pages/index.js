@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script';
 import Header from '../components/Header';
 import getCount from '../api/getCount';
 import getWeather from '../api/getWeather';
@@ -18,6 +19,7 @@ export default function Home({ count, weather, meals, corona, board, calendar, g
         <title>브니엘고 나우</title>
         <meta name="description" content="브니엘고 나우(NOW)는 브니엘고등학교 관련 정보를 제공하는 알림판입니다." />
         <meta name="keywords" content="브니엘고등학교, 알림판, 현황판, 대시보드" />
+        <Script src="https://app.embed.im/snow.js" defer />
       </Head>
 
       <Header 
