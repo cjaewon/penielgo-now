@@ -2,7 +2,7 @@ export default async function getCalendar() {
   const now = new Date();
 
   const year = now.getFullYear();
-  const month = now.getMonth() + 1;
+  const month = String(now.getMonth() + 1).padStart(2, "0");
 
   const form = new FormData();
 
@@ -15,5 +15,8 @@ export default async function getCalendar() {
   });
 
   const data = await res.json();
+
+  console.log(data)
+
   return data.list;
 }
