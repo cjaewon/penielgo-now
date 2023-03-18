@@ -16,7 +16,5 @@ export default async function getCalendar() {
 
   const data = await res.json();
 
-  console.log(data)
-
   return data.list;
 }
