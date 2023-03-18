@@ -36,7 +36,7 @@ function addEmoji(text) {
 
 async function getMealsByDate(date) {
   const year = date.getFullYear();
-  const month = date.getMonth() + 1;
+  const month = String(date.getMonth() + 1).padStart(2, "0");
 
   const res = await fetch(`https://school.koreacharts.com/school/meals/B000012159/${year}${month}.html`);
 
